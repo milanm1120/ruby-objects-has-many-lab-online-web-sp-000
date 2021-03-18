@@ -12,14 +12,16 @@ class Artist
   end
 
   def add_song(song)
-    @@song_count += 1
     @songs << song      #has many
     song.artist = self  #belongs to
+    @@song_count += 1
   end
 
   def add_song_by_name(name)
     song = Song.new(name)
     self.add_song(song)
+    @@song_count += 1
+    song
   end
 
   def song_count
