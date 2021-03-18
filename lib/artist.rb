@@ -1,6 +1,6 @@
 class Artist
   attr_accessor :name       #instance method, it will operate on the instance of this class and not the class itself.
-  attr_reader :songs
+  @@song_count = 0
 
   def initialize(name)
     @name = name
